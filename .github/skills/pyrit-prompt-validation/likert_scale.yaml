@@ -1,0 +1,18 @@
+# Minimal Likert scale for PyRIT SelfAskLikertScorer
+category: agreement
+scale_descriptions:
+  - label: Strongly disagree
+    score_value: 1
+    description: Strongly disagree with the statement
+  - label: Disagree
+    score_value: 2
+    description: Disagree with the statement
+  - label: Neutral
+    score_value: 3
+    description: Neither agree nor disagree
+  - label: Agree
+    score_value: 4
+    description: Agree with the statement
+  - label: Strongly agree
+    score_value: 5
+    description: Strongly agree with the statement

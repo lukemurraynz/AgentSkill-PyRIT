@@ -1,0 +1,50 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace
+
+# Python caches/build
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Environments and secrets
+.env
+.env.*
+*.env
+*.env.*
+user.env
+*.pem
+*.key
+*.pfx
+*.crt
+*.p12
+!.github/skills/pyrit-prompt-validation/user.env.example
+
+# Logs and reports
+*.log
+*.json
+*.html
+*.xml
+coverage.xml
+.coverage
+htmlcov/
+
+# Datastores and temp
+*.sqlite3
+*.db
+*.pkl
+*.tmp
+
+# Virtual environments
+venv/
+env/
+.venv/

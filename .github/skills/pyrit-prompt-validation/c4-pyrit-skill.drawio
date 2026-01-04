@@ -1,0 +1,383 @@
+<mxfile host="app.diagrams.net" modified="2026-01-02T04:35:00.000Z" agent="GitHub Copilot" version="24.0.0" type="device" pages="4">
+<diagram name="1-Context" id="c4-context">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="PyRIT Agent Skill - System Context (C4 Level 1)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="290" y="20" width="580" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="developer" value="&lt;b&gt;Developer&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Creates AI prompts and&lt;br&gt;agents in the codebase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="github-copilot" value="&lt;b&gt;GitHub Copilot&lt;/b&gt;&lt;br&gt;[Person/AI Agent]&lt;br&gt;&lt;br&gt;Automatically detects&lt;br&gt;prompts and triggers&lt;br&gt;validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="security-reviewer" value="&lt;b&gt;Security Reviewer&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Reviews validation&lt;br&gt;reports and approves&lt;br&gt;prompts for deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pyrit-skill" value="&lt;b&gt;PyRIT Agent Skill&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Automated AI prompt security&lt;br&gt;validation using Microsoft PyRIT.&lt;br&gt;Tests against 35+ attack patterns&lt;br&gt;including jailbreaks, injection,&lt;br&gt;encoding attacks. Requires 85+&lt;br&gt;security score for deployment." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=none;fontColor=#FFFFFF;fontSize=13;align=center;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-openai" value="&lt;b&gt;Azure OpenAI&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;GPT-4 model for&lt;br&gt;testing prompt&lt;br&gt;security against&lt;br&gt;adversarial attacks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="120" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="pyrit-framework" value="&lt;b&gt;PyRIT Framework&lt;/b&gt;&lt;br&gt;[External Library]&lt;br&gt;&lt;br&gt;Microsoft's Python&lt;br&gt;Risk Identification&lt;br&gt;Tool for AI prompts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="300" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="github-actions" value="&lt;b&gt;GitHub Actions&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;CI/CD pipeline&lt;br&gt;that runs validation&lt;br&gt;on every PR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="460" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="source-code" value="&lt;b&gt;Source Code Repository&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;Contains AI agents,&lt;br&gt;prompts, and system&lt;br&gt;instructions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="520" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" value="Creates/modifies&lt;br&gt;AI prompts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="developer" target="pyrit-skill">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="Triggers validation&lt;br&gt;automatically" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="github-copilot" target="pyrit-skill">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="Reviews validation&lt;br&gt;reports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="security-reviewer" target="pyrit-skill">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="Tests prompts&lt;br&gt;[HTTPS/API]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="pyrit-skill" target="azure-openai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="Uses attack&lt;br&gt;patterns [Python]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="pyrit-skill" target="pyrit-framework">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="Runs in&lt;br&gt;[Workflow]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="pyrit-skill" target="github-actions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="Extracts prompts&lt;br&gt;from [File System]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="pyrit-skill" target="source-code">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-person" value="Person/Actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-system" value="System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=none;fontColor=#FFFFFF;fontSize=10;align=center;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-external" value="External System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="2-Container" id="c4-container">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title2" value="PyRIT Agent Skill - Container Diagram (C4 Level 2)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="20" width="680" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user2" value="&lt;b&gt;Developer / Copilot&lt;/b&gt;&lt;br&gt;[Person/AI]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="system-boundary" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1168BD;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="100" width="800" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="system-label" value="PyRIT Agent Skill System" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1168BD" vertex="1" parent="1">
+          <mxGeometry x="290" y="110" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="test-suites" value="&lt;b&gt;Test Suites&lt;/b&gt;&lt;br&gt;[pytest / Python]&lt;br&gt;&lt;br&gt;35+ comprehensive tests&lt;br&gt;across 8 categories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="datasets" value="&lt;b&gt;Attack Datasets&lt;/b&gt;&lt;br&gt;[YAML Files]&lt;br&gt;&lt;br&gt;25+ attack patterns from&lt;br&gt;JBB, Sorry-Bench, PyRIT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="160" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="validation-scripts" value="&lt;b&gt;Validation Scripts&lt;/b&gt;&lt;br&gt;[PowerShell / Python]&lt;br&gt;&lt;br&gt;Orchestration and&lt;br&gt;automation tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="160" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="documentation" value="&lt;b&gt;Documentation&lt;/b&gt;&lt;br&gt;[Markdown Files]&lt;br&gt;&lt;br&gt;User guides and&lt;br&gt;architecture docs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="shared-fixtures" value="&lt;b&gt;Shared Fixtures&lt;/b&gt;&lt;br&gt;[conftest.py]&lt;br&gt;&lt;br&gt;Common test utilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="config-files" value="&lt;b&gt;Configuration&lt;/b&gt;&lt;br&gt;[.env / .yaml]&lt;br&gt;&lt;br&gt;Environment setup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="320" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-integration" value="&lt;b&gt;CI/CD Integration&lt;/b&gt;&lt;br&gt;[GitHub Actions]&lt;br&gt;&lt;br&gt;Automated validation pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="460" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pyrit-ext" value="&lt;b&gt;PyRIT Framework&lt;/b&gt;&lt;br&gt;[Python Package]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-ext" value="&lt;b&gt;Azure OpenAI&lt;/b&gt;&lt;br&gt;[External API]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="550" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-1" value="Runs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="user2" target="validation-scripts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-2" value="Loads" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=10;" edge="1" parent="1" source="validation-scripts" target="config-files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-3" value="Executes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="validation-scripts" target="test-suites">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-4" value="Uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=10;" edge="1" parent="1" source="test-suites" target="shared-fixtures">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-5" value="Loads" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=10;" edge="1" parent="1" source="test-suites" target="datasets">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-6" value="Uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=10;" edge="1" parent="1" source="test-suites" target="pyrit-ext">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-7" value="Calls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=10;" edge="1" parent="1" source="test-suites" target="azure-ext">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2-8" value="Orchestrates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=10;" edge="1" parent="1" source="validation-scripts" target="ci-integration">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2-container" value="Container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=none;fontColor=#FFFFFF;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2-external" value="External System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="720" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3-Component" id="c4-component">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title3" value="PyRIT Test Suites - Component Diagram (C4 Level 3)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="190" y="20" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="suite-boundary" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#438DD5;strokeWidth=3;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="1040" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="suite-label" value="Test Suites Container (test_suites/)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#438DD5" vertex="1" parent="1">
+          <mxGeometry x="70" y="110" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conftest" value="&lt;b&gt;conftest.py&lt;/b&gt;&lt;br&gt;[Shared Fixtures]&lt;br&gt;&lt;br&gt;setup_pyrit()&lt;br&gt;verify_environment()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jailbreak-tests" value="&lt;b&gt;test_jailbreak&lt;br&gt;_templates.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;DAN, Anti-GPT,&lt;br&gt;Code nesting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="290" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="attack-datasets-tests" value="&lt;b&gt;test_attack&lt;br&gt;_datasets.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;JBB-Behaviors&lt;br&gt;Sorry-Bench" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="290" y="160" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="multiturn-tests" value="&lt;b&gt;test_multi_turn&lt;br&gt;_escalation.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;Crescendo attacks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="290" y="290" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="encoding-tests" value="&lt;b&gt;test_obfuscated&lt;br&gt;_encoding.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;Base64, Rot13" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="160" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nested-tests" value="&lt;b&gt;test_nested&lt;br&gt;_injection.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;Nested prompts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="290" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="new-attacks" value="&lt;b&gt;test_new_attack&lt;br&gt;_patterns.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;ManyShotJailbreak&lt;br&gt;FlipAttack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="160" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="scorers-tests" value="&lt;b&gt;test_enhanced&lt;br&gt;_scorers.py&lt;/b&gt;&lt;br&gt;[Test Category]&lt;br&gt;&lt;br&gt;SelfAskRefusal&lt;br&gt;MarkdownInjection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="290" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="integration-tests" value="&lt;b&gt;test_pyrit&lt;br&gt;_integration_full.py&lt;/b&gt;&lt;br&gt;[Core Integration]&lt;br&gt;&lt;br&gt;SkeletonKey attack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="420" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dataset-loader" value="&lt;b&gt;Dataset Loader&lt;/b&gt;&lt;br&gt;[Helper]&lt;br&gt;&lt;br&gt;Loads YAML&lt;br&gt;attack patterns" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5DBDB;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="290" y="420" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="refusal-validator" value="&lt;b&gt;Refusal Validator&lt;/b&gt;&lt;br&gt;[Helper]&lt;br&gt;&lt;br&gt;Checks refusal&lt;br&gt;indicators" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5DBDB;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="420" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="score-checker" value="&lt;b&gt;Score Checker&lt;/b&gt;&lt;br&gt;[Helper]&lt;br&gt;&lt;br&gt;Validates 85+&lt;br&gt;threshold" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5DBDB;strokeColor=none;fontColor=#000000;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="420" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3-1" value="Uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=9;" edge="1" parent="1" source="conftest" target="jailbreak-tests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3-2" value="Uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=9;" edge="1" parent="1" source="conftest" target="attack-datasets-tests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3-3" value="Loads" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=9;" edge="1" parent="1" source="attack-datasets-tests" target="dataset-loader">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3-4" value="Validates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=9;" edge="1" parent="1" source="jailbreak-tests" target="refusal-validator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3-5" value="Checks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#707070;strokeWidth=1;fontSize=9;" edge="1" parent="1" source="scorers-tests" target="score-checker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="560" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3-component" value="Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="600" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3-helper" value="Helper" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5DBDB;strokeColor=none;fontColor=#000000;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="600" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4-Code" id="c4-code">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title4" value="PyRIT Validation Flow - Sequence Diagram (C4 Level 4)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="190" y="20" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-dev" value="Developer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#08427B;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="script" value="&lt;b&gt;run-pyrit-validation.ps1&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=11;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="160" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="pytest" value="&lt;b&gt;pytest&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=11;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="140" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="tests" value="&lt;b&gt;Test Suite&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=11;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="140" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="pyrit-fw" value="&lt;b&gt;PyRIT&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85C1E9;strokeColor=none;fontColor=#000000;fontSize=11;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="760" y="100" width="140" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="azure" value="&lt;b&gt;Azure OpenAI&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=none;fontColor=#FFFFFF;fontSize=11;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="940" y="100" width="140" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1" value="1: Execute" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="actor-dev" target="script">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="400" as="sourcePoint" />
+            <mxPoint x="570" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2" value="2: Load user.env" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="190" as="sourcePoint" />
+            <mxPoint x="280" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="190" />
+              <mxPoint x="340" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3" value="3: Run pytest" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="script" target="pytest">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="240" as="sourcePoint" />
+            <mxPoint x="400" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4" value="4: Discover tests" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="pytest" target="tests">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="270" as="sourcePoint" />
+            <mxPoint x="580" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5" value="5: setup_pyrit()" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="tests" target="pyrit-fw">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="300" as="sourcePoint" />
+            <mxPoint x="760" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6" value="6: initialize()" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="330" as="sourcePoint" />
+            <mxPoint x="830" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="890" y="330" />
+              <mxPoint x="890" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7" value="7: Load datasets" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="370" as="sourcePoint" />
+            <mxPoint x="650" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="370" />
+              <mxPoint x="710" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq8" value="8: Execute attack" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="tests" target="pyrit-fw">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="410" as="sourcePoint" />
+            <mxPoint x="760" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq9" value="9: Send prompt" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="pyrit-fw" target="azure">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="440" as="sourcePoint" />
+            <mxPoint x="940" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq10" value="10: Response" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;dashed=1;" edge="1" parent="1" source="azure" target="pyrit-fw">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="470" as="sourcePoint" />
+            <mxPoint x="900" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq11" value="11: Score result" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="490" as="sourcePoint" />
+            <mxPoint x="830" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="890" y="490" />
+              <mxPoint x="890" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq12" value="12: Attack result" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;dashed=1;" edge="1" parent="1" source="pyrit-fw" target="tests">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="530" as="sourcePoint" />
+            <mxPoint x="720" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq13" value="13: Validate refusal" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="550" as="sourcePoint" />
+            <mxPoint x="650" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="550" />
+              <mxPoint x="710" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq14" value="14: Check score ≥85" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="590" as="sourcePoint" />
+            <mxPoint x="650" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="590" />
+              <mxPoint x="710" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq15" value="15: Test result" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;dashed=1;" edge="1" parent="1" source="tests" target="pytest">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="630" as="sourcePoint" />
+            <mxPoint x="540" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq16" value="16: Summary" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;dashed=1;" edge="1" parent="1" source="pytest" target="script">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="650" as="sourcePoint" />
+            <mxPoint x="360" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq17" value="17: Display" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=2;fontSize=10;dashed=1;" edge="1" parent="1" source="script" target="actor-dev">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="670" as="sourcePoint" />
+            <mxPoint x="120" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
