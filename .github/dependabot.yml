@@ -1,0 +1,60 @@
+# Dependabot configuration for AgentSkill-PyRIT
+# Automatically checks for dependency updates and creates PRs
+
+version: 2
+updates:
+  # Python dependencies - PyRIT and related packages
+  - package-ecosystem: "pip"
+    directory: "/.github/skills/pyrit-prompt-validation"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "lukej"
+    labels:
+      - "dependencies"
+      - "python"
+    commit-message:
+      prefix: "deps"
+      prefix-development: "deps-dev"
+      include: "scope"
+    # Group updates for better PR management
+    groups:
+      pyrit-core:
+        patterns:
+          - "pyrit*"
+        update-types:
+          - "minor"
+          - "patch"
+      azure-dependencies:
+        patterns:
+          - "azure-*"
+        update-types:
+          - "minor"
+          - "patch"
+      dev-dependencies:
+        patterns:
+          - "pytest*"
+          - "mypy"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "lukej"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"
+      include: "scope"

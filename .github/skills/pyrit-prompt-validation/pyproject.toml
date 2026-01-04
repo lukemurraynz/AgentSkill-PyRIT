@@ -1,0 +1,62 @@
+[tool.mypy]
+# Python version for type checking
+python_version = "3.11"
+
+# General type checking options
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = false
+
+# Strictness - balanced for existing codebase
+disallow_untyped_defs = false  # Too strict for legacy code
+disallow_untyped_calls = false  # Allow calling untyped functions
+check_untyped_defs = true  # Type check function bodies even without annotations
+disallow_incomplete_defs = false  # Allow partial type hints
+
+# Import handling
+ignore_missing_imports = true  # Ignore missing stubs for third-party libraries
+follow_imports = "normal"
+
+# Error reporting
+show_error_codes = true
+pretty = true
+color_output = true
+error_summary = true
+
+# Specific module overrides
+[[tool.mypy.overrides]]
+module = "pyrit.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pytest.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "azure.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+filterwarnings = [
+    "ignore:.*PytestRemovedIn9Warning.*"
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.venv
+  | venv
+  | build
+  | dist
+)/
+'''
