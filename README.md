@@ -1,6 +1,8 @@
 # PyRIT Prompt Validation Agent Skill
 
-Repo to run PyRIT-based prompt validation, intended as a Agent Skill for use with GitHub Copilot and Coding Agent.
+Repo to run PyRIT-based prompt validation, intended as an Agent Skill for use with GitHub Copilot and Coding Agent.
+
+> Blog article: [Secure AI Prompts with PyRIT Validation & Agent Skills](https://luke.geek.nz/azure/pyrit-agent-skills-prompt-validation).
 
 ## Setup
 
