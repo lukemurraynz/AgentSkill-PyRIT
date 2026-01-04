@@ -42,18 +42,6 @@ updates:
           - "minor"
           - "patch"
 
-  # GitHub Actions dependencies
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-    open-pull-requests-limit: 3
-    reviewers:
-      - "lukej"
-    labels:
-      - "dependencies"
       - "github-actions"
     commit-message:
       prefix: "ci"
