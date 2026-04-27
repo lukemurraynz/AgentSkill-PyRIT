@@ -8,7 +8,7 @@ pyrit>=0.10.0
 azure-identity>=1.15.0
 
 # Environment management
-python-dotenv>=1.0.0
+python-dotenv>=1.2.2
 
 # Console output formatting
 colorama>=0.4.6
