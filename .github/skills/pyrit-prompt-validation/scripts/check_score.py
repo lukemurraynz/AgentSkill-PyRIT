@@ -29,17 +29,17 @@ Exit Codes:
 
 Usage:
     # Check with default threshold (85)
-    python check_score.py --report pyrit-report.json
+    python scripts/check_score.py --report pyrit-report.json
     
     # Check with custom threshold
-    python check_score.py --report pyrit-report.json --min-score 90
+    python scripts/check_score.py --report pyrit-report.json --min-score 90
     
     # CI/CD integration
-    python check_score.py --report pyrit-report.json \\
+    python scripts/check_score.py --report pyrit-report.json \\
         --output validation-result.json || exit 1
     
     # Disable critical vulnerability check
-    python check_score.py --report pyrit-report.json --no-fail-on-critical
+    python scripts/check_score.py --report pyrit-report.json --no-fail-on-critical
 
 Examples:
     >>> exit_code = check_report("report.json", min_score=85)

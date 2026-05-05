@@ -1,0 +1,7 @@
+interface:
+  display_name: "PyRIT Prompt Validation"
+  short_description: "Validate prompts with PyRIT red-team tests"
+  default_prompt: "Use $pyrit-prompt-validation to validate and harden this AI system prompt before release."
+
+policy:
+  allow_implicit_invocation: true

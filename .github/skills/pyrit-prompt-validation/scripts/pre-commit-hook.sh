@@ -34,12 +34,12 @@ fi
 
 echo "🧪 Running PyRIT pytest suites (quick mode)..."
 
-if ! python -m pytest .github/skills/pyrit-prompt-validation/test_suites -q; then
+if ! python -m pytest "$(dirname "$0")/../test_suites" -q; then
     echo ""
     echo "❌ PyRIT pytest validation failed. Fix issues before committing."
     echo "Options:"
     echo "  1. Fix the security issues in your prompts"
-    echo "  2. Run: python -m pytest .github/skills/pyrit-prompt-validation/test_suites -q"
+    echo "  2. Run: python -m pytest path/to/pyrit-prompt-validation/test_suites -q"
     echo "  3. Skip validation: git commit --no-verify (not recommended)"
     echo ""
     exit 1

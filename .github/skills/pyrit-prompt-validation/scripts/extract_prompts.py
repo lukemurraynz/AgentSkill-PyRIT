@@ -12,16 +12,16 @@ Supported Formats:
 
 Usage:
     # Extract from single file
-    python extract_prompts.py --file src/MyAgent.cs
+    python scripts/extract_prompts.py --file src/MyAgent.cs
     
     # Extract from directory (recursive)
-    python extract_prompts.py --source-dir src --pattern "*Agent*.cs"
+    python scripts/extract_prompts.py --source-dir src --pattern "*Agent*.cs"
     
     # Include code context (for verification)
-    python extract_prompts.py --source-dir src --include-context
+    python scripts/extract_prompts.py --source-dir src --include-context
     
     # Output to file
-    python extract_prompts.py --source-dir src --output prompts.json
+    python scripts/extract_prompts.py --source-dir src --output prompts.json
 
 Exit Codes:
     0 - Success (prompts extracted successfully)

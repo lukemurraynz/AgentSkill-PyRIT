@@ -123,8 +123,9 @@ _log_formatter = SafeCorrelationFormatter(
     '%(asctime)s - [%(correlation_id)s] - %(name)s - %(levelname)s - %(message)s'
 )
 
+_skill_root = Path(__file__).parent.parent
 _log_handlers = [
-    logging.FileHandler('.github/skills/pyrit-prompt-validation/pyrit-validation.log'),
+    logging.FileHandler(_skill_root / "pyrit-validation.log"),
     logging.StreamHandler(),
 ]
 
