@@ -2,7 +2,7 @@
 # Verify the current PyRIT release notes before changing API-dependent tests.
 pyrit>=0.13.0
 
-azure-identity>=1.15.0
+azure-identity>=1.25.3
 
 python-dotenv>=1.2.2
 
